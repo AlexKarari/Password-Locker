@@ -51,3 +51,11 @@ class User_Credentials:
                     return True
 
         return False
+
+    @classmethod
+    def display_contacts(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.list_of_creds
+        
