@@ -21,6 +21,5 @@ class User_Credentials:
         '''
 
         User_Credentials.list_of_creds.remove(self)
-        
-        
+
 
