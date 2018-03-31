@@ -163,6 +163,37 @@ def main():
                                 print("Please Enter a valid code")
                                 continue
 
+                    elif option == 'e':
+                        print("WARNING! You will log out of your account. Type y(for yes)/n(for no) to continue...")
+                        logout = input().lower()
+
+                        if logout == 'y':
+                            print("You have Successfully logged out of your account. Goodbye")
+                            break
+                        elif logout == 'n':
+                            continue
+                    elif option == 'c':
+                        while True:
+                            print("Search for account to delete")
+
+                            search_name = input()
+
+                            if check_existing_credentials(search_name):
+                                search_credential = find_credential(search_name)
+                                print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
+                                print("Delete? y(for yes)/n(for no)")
+                                proceed = input().lower()
+                                if proceed == 'y':
+                                    delete_credential(search_credential)
+                                    print("Account deleted")
+                                    break
+                                elif proceed == 'n':
+                                    continue
+
+                            else:
+                                print("Contact Does not exist")
+                                break
+
                    
 
 
