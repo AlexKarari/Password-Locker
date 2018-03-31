@@ -38,7 +38,7 @@ class User_Credentials:
                 return credential
 
     @classmethod
-    def credentials_exist(cls, acc_name):
+    def credential_exist(cls, name):
         '''
         Method that checks if a credentials exists from the list_of_creds.
         Args:
@@ -47,15 +47,15 @@ class User_Credentials:
             Boolean: True or false depending if the credentials exists
         '''
         for credential in cls.list_of_creds:
-            if credential.acc_name == acc_name:
-                    return True
-
+            if credential.acc_name == name:
+                return True
         return False
 
     @classmethod
-    def display_contacts(cls):
+    def display_credentials(cls):
         '''
         method that returns the credentials list
         '''
         return cls.list_of_creds
         
+
