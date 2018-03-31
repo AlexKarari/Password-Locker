@@ -73,9 +73,10 @@ class TestCredentials(unittest.TestCase):
         test_credentials = User_Credentials("Pinterest", "56@78")  # new ccredential
         test_credentials.save_credentials()
 
-        credentials_exists = User_Credentials.credential_exist("name")
+        credentials_exists = User_Credentials.credentials_exist("name")
 
         self.assertTrue(credentials_exists)
+
 
 if __name__ == '__main__':
     unittest.main()
