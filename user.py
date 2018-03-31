@@ -10,7 +10,11 @@ class User:
         self.gender = gender
         self.password = password
 
-
+    def save_user(self):
+        '''
+        function that saves User objects into list_of_users
+        '''
+        self.list_of_users.append(self)
 
 
 
