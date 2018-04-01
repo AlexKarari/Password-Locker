@@ -99,9 +99,10 @@ def main():
                     created_username = input()
                     print("Your Password")
                     created_password = input()
+                    print("-"*24)
                 else:
                     print(f"Greetings {created_username}, welcome to your Account")
-                    print("Select an option below to continue: Enter a, b, c, d or e")
+                    print("Select an option below to continue: Enter either a, b, c, d or e to continue.")
                     print("-"*57)
                     print('\n')
 
@@ -155,6 +156,7 @@ def main():
                     elif option == 'a':
                         while True:
                             print("Your registered accounts are as listed below:")
+                            print("-"*40)
                             if display_credentials():
 
                                 for credential in display_credentials():
@@ -214,13 +216,15 @@ def main():
                             optionb = input().lower()
                             if optionb == 'y':
                                 print("Enter an account name")
+                                print("-"*20)
 
                                 search_name = input()
 
                                 if check_existing_credentials(search_name):
                                     search_credential = find_credential(
                                         search_name)
-                                    print(f"ACCOUNT NAME: {search_credential.acc_name} \n PASSWORD: {search_credential.acc_password}")
+                                    print(f"ACCOUNT NAME: {search_credential.acc_name} . PASSWORD: {search_credential.acc_password}")
+                                    print("-"*20)
                                 else:
                                     print("That Account Does not exist")
                             elif optionb == 'n':
@@ -322,8 +326,7 @@ def main():
                         else:
                             print("Please Enter a valid code")
                 elif option == 'e':
-                    print(
-                        "WARNING! You will be logged out of your account. Are you sure? y/n")
+                    print("You will be logged out of your account. Are you sure? y/n")
                     logout = input().lower()
 
                     if logout == 'y':
@@ -345,7 +348,7 @@ def main():
                             sure = input().lower()
                             if sure == 'y':
                                 del_credentials(search_credential)
-                                print("Account SUCCESSFULLY deleted")
+                                print("Account deleted")
                                 break
                             elif sure == 'n':
                                 continue
