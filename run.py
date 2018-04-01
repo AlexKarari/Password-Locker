@@ -190,7 +190,7 @@ def main():
                                 print("Delete? y(for yes)/n(for no)")
                                 proceed = input().lower()
                                 if proceed == 'y':
-                                    delete_credential(search_credential)
+                                    del_credentials(search_credential)
                                     print("Account deleted")
                                     break
                                 elif proceed == 'n':
@@ -336,7 +336,7 @@ def main():
                             print("Delete? y/n")
                             sure = input().lower()
                             if sure == 'y':
-                                delete_credential(search_credential)
+                                del_credentials(search_credential)
                                 print("Account SUCCESSFULLY deleted")
                                 break
                             elif sure == 'n':
