@@ -65,7 +65,7 @@ def main():
 
         if short_code == 'cu':
             print("Create your prefered username")
-            print("-"*28)
+            print("-"*29)
             new_username = input()
 
             print("Create a desired password")
@@ -73,7 +73,7 @@ def main():
             new_password = input()
 
             print("Confirm password")
-            print("-"*20)
+            print("-"*16)
             confirm_password = input()
 
             while confirm_password != new_password:
@@ -84,10 +84,10 @@ def main():
                 confirm_password = input()
             else:
                 print(f"Congratulations {new_username}! You have created your new account.")
-                print("-"*50)
+                print("-"*60)
                 print('\n')
                 print("Proceed to your Account")
-                print("-"*30)
+                print("-"*24)
                 print("Username:")
                 created_username = input()
                 print("Password:")
@@ -100,23 +100,21 @@ def main():
                     print("Your Password")
                     created_password = input()
                 else:
-                    print(f"Welcome: {created_username} to your Account")
-                    print('\n')
-
-                    print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
-                    print("-"*60)
+                    print(f"Greetings {created_username}, welcome to your Account")
+                    print("Select an option below to continue: Enter a, b, c, d or e")
+                    print("-"*57)
                     print('\n')
 
                 while True:
-                    print("a: View saved credentials")
-                    print("b: Add new credentials")
-                    print("c: Remove credentials")
-                    print("d: Search credentials")
+                    print("a: View saved account")
+                    print("b: Add new account")
+                    print("c: Remove existing account")
+                    print("d: Search for existing account")
                     print("e: Log Out")
-                    print("-"*30)
+                    print("-"*57)
                     print('\n')
                     option = input()
-                    print("-"*30)
+                    print("-"*50)
 
                     if option == 'b':
                         while True:
@@ -125,14 +123,15 @@ def main():
                             choice = input().lower()
                             if choice == 'y':
                                 print("Enter The Account Name")
+                                print("-"*35)
                                 acc_name = input()
                                 print("Enter a password")
-                                print(
-                                    "To generate random password enter keyword 'gen' or 'n' to create your own password")
+                                print("-"*35)
+                                print('\n')
+                                print("To generate random password enter keyword 'gen' or 'n' to create your own password")
                                 keyword = input().lower()
                                 if keyword == 'gen':
-                                    acc_password = random.randint(
-                                        111111, 1111111)
+                                    acc_password = random.randint(111111, 1111111)
                                     print(f"Account: {acc_name}")
                                     print(f"Password: {acc_password}")
                                     print('\n')
