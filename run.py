@@ -121,7 +121,7 @@ def main():
                                 print(
                                     "To generate random password enter keyword 'gen' or 'n' to create your own password")
                                 keyword = input().lower()
-                                if keyword == 'gp':
+                                if keyword == 'gen':
                                     acc_password = random.randint(
                                         111111, 1111111)
                                     print(f"Account: {acc_name}")
