@@ -48,9 +48,18 @@ def display_credentials():
 
 def main():
     while True:
+        print("-"*30)
         print("Welcome to password Locker Application.")
+        print("The app that saves you from the stress of remembering your passwords for good.")
+        print("-"*30)
         print('\n')
-        print("Use these short codes to select an option: Create New User account use 'cu': Login to your account use 'lg' or 'esc' to exit password locker")
+        print("Use these short codes to select an option:") 
+        print("-"*30)
+        print("To create new user account, type: 'cu'")
+        print("To log in to your account, type: 'lg'")
+        print("To exit password locker, type: 'esc'")
+        print("-"*30)
+        
         short_code = input().lower()
         print('\n')
 
