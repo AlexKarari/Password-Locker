@@ -48,10 +48,13 @@ def display_credentials():
 
 def main():
     while True:
-        print("-"*30)
+        print("-"*80)
+        print("-"*80)
         print("Welcome to password Locker Application.")
+        print('\n')
         print("The app that saves you from the stress of remembering your passwords for good.")
-        print("-"*30)
+        print("-"*80)
+        print("-"*80)
         print('\n')
         print("Use these short codes to select an option:") 
         print("-"*30)
@@ -180,7 +183,7 @@ def main():
                                 continue
 
                     elif option == 'e':
-                        print("WARNING! You will log out of your account. Type y(for yes)/n(for no) to continue...")
+                        print("You will log out of your account. Type y(for yes)/n(for no) to continue...")
                         logout = input().lower()
 
                         if logout == 'y':
@@ -245,8 +248,8 @@ def main():
             default_user_password = input()
             print('\n')
 
-            while default_user_name != 'testuser' or default_user_password != '12@34':
-                print("Wrong userName or password...Username 'testuser' and password '12@34'")
+            while default_user_name != 'example' or default_user_password != '12@34':
+                print("Wrong username/Password. Default Username is 'example' and password is '12@34'")
                 print("Enter Username")
                 default_user_name = input()
 
@@ -255,7 +258,7 @@ def main():
 
                 print('\n')
 
-            if default_user_name == 'testuser' and default_user_password == '12@34':
+            if default_user_name == 'example' and default_user_password == '12@34':
                 print("Login Successful!")
                 print('\n')
                 print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
@@ -302,7 +305,7 @@ def main():
                             break
                         else:
                             print("Please use 'y' for yes or 'n' for no!")
-                elif option == 'a':
+                elif option == '1':
                     while True:
                         print("Listed below are all your accounts")
                         if display_credentials():
@@ -325,7 +328,7 @@ def main():
                             continue
                         else:
                             print("Please Enter a valid code")
-                elif option == 'e':
+                elif option == '5':
                     print("You will be logged out of your account. Are you sure? y/n")
                     logout = input().lower()
 
@@ -335,7 +338,7 @@ def main():
                     elif logout == 'n':
                         continue
 
-                elif option == 'c':
+                elif option == '3':
                     while True:
                         print("Search for credential to delete")
 
@@ -357,7 +360,7 @@ def main():
                             print("That account Does not exist")
                             break
 
-                elif option == 'd':
+                elif option == '4':
                     while True:
                         print("Continue? y/n")
                         option2 = input().lower()
